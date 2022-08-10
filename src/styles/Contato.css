@@ -1,0 +1,139 @@
+:root {
+    --white: #fff;
+    --fundo: #24B772;
+    --p: #1B8C57;
+    --escrita2: #13613D;
+    --escrita1: #0A3722;
+    --bold: #00281C;
+    --black: #000;
+    --hover: #7034CA;
+}
+
+footer {
+    background-color: #313131;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer img {
+    width: 60%;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+footer aside {
+    margin-left: 2%;
+}
+
+footer aside h2 {
+    font-size: 40px;
+    margin-bottom: 3%;
+    color: var(--fundo);
+}
+
+footer aside p {
+    margin-bottom: 3%;
+    margin-right: 3%;
+    color: #bfbfbf;
+}
+
+footer aside ul {
+    font-size: 16px;
+}
+
+footer aside ul li {
+    margin-bottom: 2%;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+}
+
+footer aside ul li svg {
+    margin-right: 1%;
+    color: var(--fundo);
+}
+
+.coolBeans {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--fundo);
+    font-weight: 700;
+    border-radius: 50px;
+    border: 2px solid var(--escrita2);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    cursor: pointer;
+}
+  
+.coolBeans::after {
+    background-color: var(--fundo);
+    border-radius: 50px;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+    
+.coolBeans:hover::after {
+    transform: translate(0, 0);
+}
+     
+.coolBeans:hover {
+    border: 2px solid transparent;
+    color:var(--bold);
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+/*--------------------- COPYRIGHT ---------------------*/
+
+.copy {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(21, 21, 21);
+    color: #bfbfbf;
+    font-size: clamp(0.8rem, 1.5vw, 16px);
+    text-align: center;
+}
+
+.copy a {
+    color: #bfbfbf;
+    margin-left: 2px;
+    font-weight: 700;
+}
+
+.copy a:hover {
+    color: var(--white);
+    background-color: #313131;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+    footer img {
+        padding-bottom: 2%;
+        width: 100%;
+    }
+    footer button {
+        margin-bottom: 3%;
+    }
+} 

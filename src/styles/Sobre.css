@@ -1,0 +1,115 @@
+:root {
+    --white: #fff;
+    --fundo: #24B772;
+    --p: #1B8C57;
+    --escrita2: #13613D;
+    --escrita1: #0A3722;
+    --bold: #00281C;
+    --black: #000;
+    --hover: #7034CA;
+}
+
+.divSobre {
+    padding-top: 5%;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divSobre svg {
+    font-size: 60px;
+    color: var(--escrita2);
+}
+
+.divSobre h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: #fff;
+}
+
+.divSobreImgTexto {
+    box-shadow: var(--escrita2) 0px 12px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.divSobreImgTexto img {
+    height: 25vw;
+    min-height: 200px;
+}
+
+.divSobreImgTexto p {
+    font-size: 18px;
+    text-indent: 3%;
+    color: #646464;
+    padding: 1% 3% 3% 2%;
+    width: 80%;
+}
+
+.divSobreImgTexto ul {
+    padding: 4%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.divSobreImgTexto svg {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.barraAnimed {
+    margin: 5px;
+    height: 2px;
+    width: 50%;
+    background-color: var(--fundo);
+    animation-name: barra;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes barra {
+    0% {
+        width: 20%;
+    }
+
+    50% {
+        width: 40%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@media (max-width:700px) {
+    .divSobre h2 {
+      font-size: 20px;
+    }
+    .divSobre svg {
+        font-size: 30px;
+    }
+    .divSobreImgTexto {
+      flex-direction: column;
+      align-items: center;
+    }
+    .divSobreImgTexto img {
+      padding: 5%;
+      align-items: center;
+      height: 100px;
+    }
+    .divSobreImgTexto p{
+        font-size: 14px;
+      width: 90%;
+    }
+}

@@ -1,0 +1,137 @@
+:root {
+    --white: #fff;
+    --fundo: #24B772;
+    --p: #1B8C57;
+    --escrita2: #13613D;
+    --escrita1: #0A3722;
+    --bold: #00281C;
+    --black: #000;
+    --hover: #7034CA;
+}
+
+header {
+    width: 100%;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 1 !important;
+    margin-top: 0;
+    border-bottom: 2px solid var(--bold);
+}
+
+header img {
+    color: white;
+    height: 60px;
+    margin-top: 2px;
+    padding: 0 20px;
+    margin-left: 3%;
+}
+
+.banner-infos {
+    width: 70%;
+    margin-left: 5%;
+}
+
+nav {
+    background: var(--black);
+    height: 100%;
+    width: 100%;
+    line-height: normal;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+}
+
+nav ul li {
+    padding: 5px;
+}
+
+nav ul li a {
+    padding: 5px;
+    margin-right: 10px;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    border-bottom: 3px solid var(--escrita2);
+    transition: .2s;
+    font-size: 19px;
+}
+
+.checkbtn {
+    color: white;
+    float: right;
+    margin-left: 4%;
+    cursor: pointer;
+    display: none;
+}
+
+.checkbtn svg {
+    font-size: 25px;
+    color: var(--white);
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        height: 100vh;
+        background: #000000;
+        top: 64px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+        padding-top: 3%;
+        line-height: 30px;
+        overflow: hidden;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+    }
+    #check:checked~ul {
+        left: 0;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 952px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+    label.logo {
+        padding-left: 50px;
+    }
+}

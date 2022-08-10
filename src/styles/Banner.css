@@ -1,0 +1,347 @@
+:root {
+    --white: #fff;
+    --fundo: #24B772;
+    --p: #1B8C57;
+    --escrita2: #13613D;
+    --escrita1: #0A3722;
+    --bold: #00281C;
+    --black: #000;
+    --hover: #7034CA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background: linear-gradient(90deg, rgb(21, 21, 21) 40%, rgb(50, 50, 50) 100%); 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bannerInfos {
+    padding-left: 6%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 2px 2px var(--black);
+}
+
+.bannerInfos h5{
+    color: var(--escrita2);
+    font-size: 30px;
+    margin-bottom: -1%;
+    font-weight: 100;
+    font-weight: 700;
+}
+
+
+.bannerInfos h4{
+    color: var(--white);
+    font-size: 30px;
+    margin-bottom: -3%;
+    font-weight: 700;
+}
+
+.bannerInfos h1{
+    color: var(--escrita2);
+    font-size: 60px;
+    margin-bottom: -2%;
+    font-weight: 900;
+    text-shadow: 2px 2px 7px var(--black);
+}
+
+.bannerInfos h3{
+    color: rgb(185, 185, 185);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 2px 7px var(--black);
+}
+
+.buttons {
+    width: 70%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.buttons .coolBeans {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--fundo);
+    font-weight: 700;
+    border-radius: 50px;
+    border: 2px solid var(--escrita2);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    cursor: pointer;
+}
+  
+.coolBeans::after {
+    background-color: var(--fundo);
+    border-radius: 50px;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+    
+.coolBeans:hover::after {
+    transform: translate(0, 0);
+}
+     
+.coolBeans:hover {
+    border: 2px solid transparent;
+    color:var(--bold);
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.container-ilustraçao {
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-lustration{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.card-lustration .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.card-lustration .circle::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bold);
+    clip-path: circle(170px at center);
+    transition: 0.5s;
+} 
+.card-lustration:hover .circle:before{
+    clip-path: circle(200px at center);
+    background-color: rgba(0, 0, 0, 0.426);
+    filter: blur(2px);
+}
+.card-lustration img{
+    position: absolute;
+    bottom: 0;
+    height: 500px;
+    pointer-events: none;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.card-lustration:hover img{
+    left: 35%;
+    top: 30%;
+    height: 400px;
+    transition: 0.5s;
+}
+.card-lustration .content{
+    position: relative;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    top: 0;
+    visibility: hidden;
+}
+.card-lustration:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+.card-lustration .content .content-icons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.icon1 svg{
+    position: absolute;
+    top: -10%;
+    left: 45%;
+    color: rgb(18, 79, 224);
+    font-size: 70px;
+}
+.icon2 svg{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+    color: rgb(194, 19, 19);
+    font-size: 80px;
+}.icon3 svg{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    color: yellow;
+    font-size: 70px;
+}.icon4 svg{
+    position: absolute;
+    top: 60%;
+    left: -10%;
+    color: rgb(90, 1, 90);
+    font-size: 70px;
+}.icon5 svg{
+    position: absolute;
+    top: 30%;
+    left: -15%;
+    color: #108adb;
+    font-size: 80px;
+}.icon6 svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(221, 18, 224);
+    font-size: 70px;
+}
+.icon7 svg{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: rgb(126, 126, 126);
+    font-size: 70px;
+}
+.icon8 svg{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+}
+.icon9 svg{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    color: rgb(8, 133, 33);
+    font-size: 80px;
+}
+.icon10 svg{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: rgb(189, 41, 41);
+    font-size: 70px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        height: 130vh;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .buttons{
+        width: 100%;
+    }
+    .card-lustration{
+        width: 90%;
+        height: 60%;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .card-lustration img, .card-lustration:hover img {
+        height: 300px;
+    }
+    .card-lustration:hover img{
+        left: 45%;
+        top: 40%;
+    }
+    .card-lustration .content {                
+        top: 15%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-lustration .circle::before {
+        clip-path: circle(130px at center);
+    }
+    .card-lustration:hover .circle:before{
+        clip-path: circle(150px at center);
+        background-color: rgba(0, 0, 0, 0.426);
+        filter: blur(2px);
+    }
+    .card-lustration .content{
+        width: 250px;
+        height: 250px; 
+        top: 25%;
+        left: 10%;
+    }
+
+    .card-lustration img, .card-lustration:hover img {
+        height: 200px;
+    }
+    .card-lustration:hover img{
+        left: 40%;
+        top: 50%;
+        transform: none;
+    }
+    .content-icons svg {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .bannerInfos h1 {
+        font-size: 40px;
+    }
+    .bannerInfos h4 {
+        font-size: 20px;
+    }
+    .bannerInfos h5 {
+        font-size: 30px;
+    }
+    .bannerInfos h3 {
+        font-size: 17px;
+    }
+    .bannerInfos svg {
+        color: #ffffff;
+        font-size: 30px;
+    }
+    .buttons button {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
