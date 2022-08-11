@@ -176,7 +176,7 @@ function App() {
 
       <footer id="contato">
         <img data-aos="fade-right" src={img} alt="" />
-        <aside data-aos="fade-up">
+        <aside>
           <h2>Contato</h2>
           <p>
             Entre em contato conosco pelos canais de comunicação abaixo.

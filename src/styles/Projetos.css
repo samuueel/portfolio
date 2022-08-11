@@ -113,7 +113,6 @@
 
 .card .cardInfos {
     display: flex;
-    height: 30vw;
     flex-direction: column;
     text-align: center;
     position: relative;
@@ -127,4 +126,10 @@
 .card:hover .cardInfos {
     opacity: 1;
     transform: translateY(5%);
+}
+
+@media (max-width: 350px) {
+    .card {
+        width: 100%;
+    }
 }
