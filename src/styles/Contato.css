@@ -11,21 +11,24 @@
 
 footer {
     background-color: #313131;
+    overflow-x: hidden;
+
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 footer img {
-    width: 60%;
+    height: 500px;
     object-fit: contain;
     background-color: #000;
     border-radius: 20px;
 }
 
 footer aside {
-    margin-left: 2%;
+    width: 100%;
+    padding-left: 20px;
 }
 
 footer aside h2 {
@@ -125,15 +128,17 @@ footer aside ul li svg {
     background-color: #313131;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 950px) {
     footer {
         flex-direction: column;
-    }
-    footer img {
-        padding-bottom: 2%;
-        width: 100%;
+        align-items: center;
     }
     footer button {
         margin-bottom: 3%;
     }
 } 
+@media (max-width: 950px) {
+    footer img {
+        height: 300px;
+    }
+}

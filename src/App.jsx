@@ -4,19 +4,18 @@ import Foto from "./imgs/Foto.jpg"
 import Projeto1 from './imgProjetos/resenhafilmes.png'
 import Projeto2 from './imgProjetos/DHO.svg'
 import Projeto3 from './imgProjetos/emconstrucao.png'
-import img from "./imgs/undraw_static_website_re_x70h.svg"
+import img from "./imgs/giphy.gif"
 
-import { BsFillEnvelopeFill, BsFillTelephoneFill, BsFillArrowDownCircleFill } from "react-icons/bs";
+import { BsFillEnvelopeFill, BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillInstagram, AiFillEnvironment, AiFillGithub } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { BiUserCircle, BiNews } from "react-icons/bi";
 import { DiBootstrap, DiCss3, DiJavascript1, DiHtml5, DiReact, DiSass, DiPhotoshop, DiScrum } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 
-/* import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-AOS.init();*/
+AOS.init();
 
 import './styles/App.css'
 import './styles/Banner.css'
@@ -115,7 +114,11 @@ function App() {
             Descobri a programação através do YouTube, uma plataforma que assisto muito, e me apaixonei pela profissão.
             Meu sonho é poder trabalhar com programação, mas não está sendo fácil.
             Como sou autodidata, luto sozinho diariamente para um dia eu me tornar um excelente profissional! <br />
-          </p>
+            <p>
+              "Um sonho é apenas um desejo, até o momento em que você começa a atuar sobre ele, e propõe-se a transformá-lo em uma meta."
+                -Mary Kay Ash
+            </p>
+          </p>       
         </div>
       </section>
 
@@ -126,7 +129,7 @@ function App() {
         <p data-aos="fade-up"> 
           Tenho muitos projetos no GitHub, como calculadoras, gerador de senha, formulários, projetos com consumo de APIs, alguns templates de blogs, entre outros... <br /> 
         </p>
-        <a href="https://github.com/samuueel">
+        <a href="https://github.com/samuueel"> 
               <div class="on-light">
                 <button class="coolBeans">
                   GitHub
@@ -135,7 +138,7 @@ function App() {
             </a>
       </div>
       <div className='projetos'>
-        <a href='https://resenha-filmes.vercel.app/' target={'_blank'} >
+        <a data-aos="flip-up" href='https://resenha-filmes.vercel.app/' target={'_blank'} >
           <div className='card'>
             <img src={Projeto1}></img>
             <div className='cardInfos'>
@@ -148,7 +151,7 @@ function App() {
             </div>
           </div>
         </a>
-        <a href='https://consultoriadho.com.br' target={'_blank'} >
+         <a data-aos="flip-up" href='https://consultoriadho.com.br' target={'_blank'} >
           <div className='card'>
             <img src={Projeto2}></img>
             <div className='cardInfos'>
@@ -161,7 +164,7 @@ function App() {
             </div>
           </div>
         </a>
-        <a href='#' target={'_blank'}>
+        <a data-aos="flip-up" href='#' target={'_blank'}> 
           <div className='card'>
             <img src={Projeto3}></img>
             <div className='cardInfos'>

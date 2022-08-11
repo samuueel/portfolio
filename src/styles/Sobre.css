@@ -50,22 +50,12 @@
     text-indent: 3%;
     color: #646464;
     padding: 1% 3% 3% 2%;
-    width: 80%;
 }
 
-.divSobreImgTexto ul {
-    padding: 4%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-}
-
-.divSobreImgTexto svg {
-    color: #ffffff;
-    font-size: 50px;
+.divSobreImgTexto p p{
+    font-weight: 700;
+    padding-top: 30px;
+    text-align: center;
 }
 
 .barraAnimed {
