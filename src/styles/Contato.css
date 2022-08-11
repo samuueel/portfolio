@@ -11,7 +11,6 @@
 
 footer {
     background-color: #313131;
-    overflow-x: hidden;
 
     display: flex;
     align-items: center;
@@ -20,7 +19,7 @@ footer {
 }
 
 footer img {
-    height: 500px;
+    width: 50%;
     object-fit: contain;
     background-color: #000;
     border-radius: 20px;
@@ -137,8 +136,9 @@ footer aside ul li svg {
         margin-bottom: 3%;
     }
 } 
-@media (max-width: 950px) {
+@media (max-width: 650px) {
     footer img {
-        height: 300px;
+        width: 100%;
+        object-fit: contain;
     }
 }
