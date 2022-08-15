@@ -25,7 +25,13 @@ import './styles/Projetos.css'
 import './styles/Sobre.css'
 
 function App() {
-
+  function scrollTop() {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
   return (
     <div className="App">
       <ul class="circles">
@@ -45,15 +51,15 @@ function App() {
         <li></li>
         <li></li>
       </ul>
-      <header id='home'>
+      <header data-aos="fade-down" id='home'>
         <nav>
           <input type="checkbox" id='check' />
           <label for="check" className='checkbtn'>
             <FaBars />
           </label>
-          <img data-aos="fade-right" src={logonav} alt="" />
+          <img onClick={scrollTop} data-aos="fade-right" src={logonav} alt="" />
           <ul data-aos="fade-left">
-            <li><a href="#home">HOME</a></li>
+            <li><a onClick={scrollTop} href="#home">HOME</a></li>
             <li><a href="#sobre">SOBRE</a></li>
             <li><a href="#projetos">PROJETOS</a></li>
             <li><a href="#contato">CONTATO</a></li>
@@ -83,7 +89,7 @@ function App() {
             </a>
           </div>
         </section>
-        <div class="card-lustration">
+        <div data-aos="fade-left" class="card-lustration">
           <div class="circle"></div>
           <div class="content">
             <ul className="content-icons">
@@ -104,11 +110,11 @@ function App() {
       </main>
 
       <section id='sobre' className='divSobre'>
-        <BiUserCircle></BiUserCircle>
+        <BiUserCircle data-aos="flip-up"></BiUserCircle>
         <h2 data-aos="fade-up">Um pouco sobre mim!</h2>
         <div className='barraAnimed'></div>
         <div className='divSobreImgTexto'>
-          <img data-aos="fade-right" src={Foto}></img>
+          <figure data-aos="fade-right"><img src={Foto}></img></figure>
           <p data-aos="fade-up">
             Olá, meu nome é Samuel Vinícius Heck, tenho 19 anos e moro atualmente em Lindolfo Collor/RS.
             Descobri a programação através do YouTube, uma plataforma que assisto muito, e me apaixonei pela profissão.
@@ -116,26 +122,26 @@ function App() {
             Como sou autodidata, luto sozinho diariamente para um dia eu me tornar um excelente profissional! <br />
             <p>
               "Um sonho é apenas um desejo, até o momento em que você começa a atuar sobre ele, e propõe-se a transformá-lo em uma meta."
-                -Mary Kay Ash
+              -Mary Kay Ash
             </p>
-          </p>       
+          </p>
         </div>
       </section>
 
       <div id='projetos' className='headerProjetos'>
-        <BiNews></BiNews>
+        <BiNews data-aos="flip-up"></BiNews>
         <h1 data-aos="fade-right">Projetos</h1>
         <div className='barraAnimed'></div>
-        <p data-aos="fade-up"> 
-          Tenho muitos projetos no GitHub, como calculadoras, gerador de senha, formulários, projetos com consumo de APIs, alguns templates de blogs, entre outros... <br /> 
+        <p data-aos="fade-up">
+          Tenho muitos projetos no GitHub, como calculadoras, gerador de senha, formulários, projetos com consumo de APIs, alguns templates de blogs, entre outros... <br />
         </p>
-        <a href="https://github.com/samuueel"> 
-              <div class="on-light">
-                <button class="coolBeans">
-                  GitHub
-                </button>
-              </div>
-            </a>
+        <a href="https://github.com/samuueel">
+          <div class="on-light">
+            <button class="coolBeans">
+              GitHub
+            </button>
+          </div>
+        </a>
       </div>
       <div className='projetos'>
         <a data-aos="flip-up" href='https://resenha-filmes.vercel.app/' target={'_blank'} >
@@ -151,7 +157,7 @@ function App() {
             </div>
           </div>
         </a>
-         <a data-aos="flip-up" href='https://consultoriadho.com.br' target={'_blank'} >
+        <a data-aos="flip-up" href='https://consultoriadho.com.br' target={'_blank'} >
           <div className='card'>
             <img src={Projeto2}></img>
             <div className='cardInfos'>
@@ -164,7 +170,7 @@ function App() {
             </div>
           </div>
         </a>
-        <a data-aos="flip-up" href='#' target={'_blank'}> 
+        <a data-aos="flip-up" href='#' target={'_blank'}>
           <div className='card'>
             <img src={Projeto3}></img>
             <div className='cardInfos'>
