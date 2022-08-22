@@ -4,6 +4,7 @@ import Foto from "./imgs/Foto.jpg"
 import Projeto1 from './imgProjetos/resenhafilmes.png'
 import Projeto2 from './imgProjetos/DHO.svg'
 import Projeto3 from './imgProjetos/emconstrucao.png'
+import Projeto4 from './imgProjetos/CoInvest.jpg'
 import img from "./imgs/giphy.gif"
 
 import { BsFillEnvelopeFill, BsFillTelephoneFill } from "react-icons/bs";
@@ -166,6 +167,18 @@ function App() {
                 Site feito para um consultório <br></br>
                 Todo o Design foi feito por mim.<br></br>
                 Desenvolvido em HTML, CSS e JS.
+              </p>
+            </div>
+          </div>
+        </a>
+        <a data-aos="flip-up" href='https://bancoruja.com.br/' target={'_blank'} >
+          <div className='card'>
+            <img src={Projeto4}></img>
+            <div className='cardInfos'>
+              <h3>CoInveste</h3>
+              <p>
+                Site de uma instituição financeira<br></br>
+                Participação no Front, ideias, arrumar layout e bugs.
               </p>
             </div>
           </div>
