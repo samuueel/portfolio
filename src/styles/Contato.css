@@ -1,16 +1,5 @@
-:root {
-    --white: #fff;
-    --fundo: #24B772;
-    --p: #1B8C57;
-    --escrita2: #13613D;
-    --escrita1: #0A3722;
-    --bold: #00281C;
-    --black: #000;
-    --hover: #7034CA;
-}
-
 footer {
-    background-color: #313131;
+    background-color: var(--bg);
 
     display: flex;
     align-items: center;
@@ -33,13 +22,13 @@ footer aside {
 footer aside h2 {
     font-size: 40px;
     margin-bottom: 3%;
-    color: var(--fundo);
+    color: var(--main-color);
 }
 
 footer aside p {
     margin-bottom: 3%;
     margin-right: 3%;
-    color: #bfbfbf;
+    color: var(--light-color);
 }
 
 footer aside ul {
@@ -55,54 +44,9 @@ footer aside ul li {
 }
 
 footer aside ul li svg {
+    font-size: 25px;
     margin-right: 1%;
-    color: var(--fundo);
-}
-
-.coolBeans {
-    width: 120px;
-    height: 35px;
-    font-size: 16px;
-    background-color: transparent;
-    color: var(--fundo);
-    font-weight: 700;
-    border-radius: 50px;
-    border: 2px solid var(--escrita2);
-    overflow: hidden;
-    position: relative;
-    text-decoration: none;
-    transition: .2s transform ease-in-out;
-    will-change: transform;
-    z-index: 0;
-    cursor: pointer;
-}
-  
-.coolBeans::after {
-    background-color: var(--fundo);
-    border-radius: 50px;
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-100%, 0) rotate(10deg);
-    transform-origin: top left;
-    transition: .2s transform ease-out;
-    will-change: transform;
-    z-index: -1;
-}
-    
-.coolBeans:hover::after {
-    transform: translate(0, 0);
-}
-     
-.coolBeans:hover {
-    border: 2px solid transparent;
-    color:var(--bold);
-    transform: scale(1.05);
-    will-change: transform;
+    color: var(--main-color);
 }
 
 /*--------------------- COPYRIGHT ---------------------*/
@@ -110,21 +54,21 @@ footer aside ul li svg {
 .copy {
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: rgb(21, 21, 21);
-    color: #bfbfbf;
+    background-color: var(--light-bg);
+    color: var(--white);
     font-size: clamp(0.8rem, 1.5vw, 16px);
     text-align: center;
 }
 
 .copy a {
-    color: #bfbfbf;
+    color: var(--white);
     margin-left: 2px;
     font-weight: 700;
 }
 
 .copy a:hover {
     color: var(--white);
-    background-color: #313131;
+    background-color: var(--black);
 }
 
 @media (max-width: 950px) {

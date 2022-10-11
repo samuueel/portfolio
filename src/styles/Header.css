@@ -1,29 +1,11 @@
-:root {
-    --white: #fff;
-    --fundo: #24B772;
-    --p: #1B8C57;
-    --escrita2: #13613D;
-    --escrita1: #0A3722;
-    --bold: #00281C;
-    --black: #000;
-    --hover: #7034CA;
-}
-
 header {
     width: 100%;
-    background-color: var(--white);
+    padding: 10px;
+    background-color: var(--bg);
     position: fixed;
     z-index: 1 !important;
     margin-top: 0;
-    border-bottom: 2px solid var(--bold);
-}
-
-header img {
-    color: white;
-    height: 60px;
-    margin-top: 2px;
-    padding: 0 20px;
-    margin-left: 3%;
+    border-bottom: 2px solid var(--main-color);
 }
 
 .banner-infos {
@@ -32,7 +14,7 @@ header img {
 }
 
 nav {
-    background: var(--black);
+    background: var(--bg);
     height: 100%;
     width: 100%;
     line-height: normal;
@@ -50,6 +32,14 @@ nav ul {
 
     display: flex;
     justify-content: end;
+    align-items: center;
+}
+
+nav h1 {
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: 900;
+    cursor: pointer;
 }
 
 nav ul li {
@@ -59,21 +49,21 @@ nav ul li {
 nav ul li a {
     padding: 5px;
     margin-right: 10px;
-    color: white;
-    font-size: 17px;
+    color: var(--black);
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-    border-bottom: 3px solid var(--escrita2);
+    border-bottom: 3px solid var(--main-color);
     transition: .2s;
     font-size: 19px;
 }
 
 .checkbtn {
-    color: white;
+    color: var(--black);
     float: right;
     margin-left: 4%;
     cursor: pointer;
@@ -96,8 +86,8 @@ nav ul li a:hover {
     nav ul {
         position: fixed;
         height: 100vh;
-        background: #000000;
-        top: 64px;
+        background: var(--bg);
+        top: 71px;
         left: -100%;
         text-align: center;
         transition: all .5s;

@@ -1,7 +1,33 @@
+:root {
+  --main-color: #27ae60;
+  --black: rgb(255, 255, 255);
+  --bg: #1b1b1b;
+  --white: rgb(207, 207, 207);
+  --light-bg: rgb(45, 45, 45);
+  --light-color: #eee;
+  --border: 1px solid rgba(255, 255, 255, 0.1);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background: var(--light-bg);
+}
+
+body.active {
+  --black: rgb(0, 0, 0);
+  --bg: rgb(226, 226, 226);
+  --white: rgb(71, 71, 71);
+  --light-bg: rgb(137, 129, 129);
+  --light-color: rgb(101, 101, 101);
+  --border: 2px solid rgba(0, 0, 0, 0.466);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411)
+}
+
 * {
   padding: 0;
   margin: 0;
-  
+  box-sizing: border-box;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -15,3 +41,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.barra {
+  top: 0;
+  left: 0;
+  height: 5px;
+  z-index: 1 !important;
+  background-image: linear-gradient(90deg, var(--escrita1) 0%, var(--escrita2) 50.52%, var(--fundo) 100%);
+  position: fixed;
+  transition: width 0.2s ease-out;
+}
