@@ -1,4 +1,3 @@
-import logonav from "./imgs/logohori.png";
 import Ilustraçao from "./imgs/1.png";
 import Foto from "./imgs/Foto.jpg";
 import Projeto1 from "./imgProjetos/resenhafilmes.png";
@@ -80,14 +79,15 @@ function App() {
     }
   };
 
-  document.querySelectorAll(".theme-colors .color").forEach((color) => {
-    color.addEventListener("click", () => {
-      const background = color.style.background;
+  document.querySelectorAll(".theme-colors .color").
+   forEach((color) => {
+     color.addEventListener("click", () => {
+       const background = color.style.background;
       document
         .querySelector(":root")
         .style.setProperty("--main-color", background);
     });
-  });
+  })
 
   const openConfig = () => {
     const theme = document.querySelector(".themes-container");
@@ -102,7 +102,28 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div class="App">
+      <div className="themes-container">
+        <AiOutlineCloseCircle id="theme-close" onClick={closeConfig} />
+
+        <h3>Tema</h3>
+        <div onClick={lightOrDark} className="theme-toggler">
+          <span>Escuro</span>
+          <span className="toggler"></span>
+          <span>Claro</span>
+        </div>
+        <h3>Escolha a cor</h3>
+        <div className="theme-colors">
+          <div className="color" style={{ background: "#2980b9" }}></div>
+          <div className="color" style={{ background: "#27ae60" }}></div>
+          <div className="color" style={{ background: "#ffa502" }}></div>
+          <div className="color" style={{ background: "#8e44ad" }}></div>
+          <div className="color" style={{ background: "#0fb9b1" }}></div>
+          <div className="color" style={{ background: "#ffd32a" }}></div>
+          <div className="color" style={{ background: "#ff0033" }}></div>
+          <div className="color" style={{ background: "#e84393" }}></div>
+        </div>
+      </div>
       <ul className="circles">
         <li><DiBootstrap/></li> 
         <li><DiCss3/></li>
@@ -313,33 +334,10 @@ function App() {
             href="https://samuueel.github.io/developer-front-end/"
             target="_blank"
           >
-            {" "}
             Samuel Heck
           </a>
           . Todos os direitos reservados.
         </span>
-      </div>
-
-      <div className="themes-container">
-        <AiOutlineCloseCircle id="theme-close" onClick={closeConfig} />
-
-        <h3>Tema</h3>
-        <div onClick={lightOrDark} className="theme-toggler">
-          <span>Claro</span>
-          <span className="toggler"></span>
-          <span>Escuro</span>
-        </div>
-        <h3>Escolha a cor</h3>
-        <div className="theme-colors">
-          <div className="color" style={{ background: "#2980b9" }}></div>
-          <div className="color" style={{ background: "#27ae60" }}></div>
-          <div className="color" style={{ background: "#ffa502" }}></div>
-          <div className="color" style={{ background: "#8e44ad" }}></div>
-          <div className="color" style={{ background: "#0fb9b1" }}></div>
-          <div className="color" style={{ background: "#ffd32a" }}></div>
-          <div className="color" style={{ background: "#ff0033" }}></div>
-          <div className="color" style={{ background: "#e84393" }}></div>
-        </div>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ body.active {
   --light-bg: rgb(137, 129, 129);
   --light-color: rgb(101, 101, 101);
   --border: 2px solid rgba(0, 0, 0, 0.466);
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411)
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
 }
 
 * {
