@@ -9,20 +9,6 @@
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-body {
-  background: var(--light-bg);
-}
-
-body.active {
-  --black: rgb(0, 0, 0);
-  --bg: rgb(226, 226, 226);
-  --white: rgb(71, 71, 71);
-  --light-bg: rgb(137, 129, 129);
-  --light-color: rgb(101, 101, 101);
-  --border: 2px solid rgba(0, 0, 0, 0.466);
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
-}
-
 * {
   padding: 0;
   margin: 0;

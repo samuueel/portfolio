@@ -69,61 +69,8 @@ function App() {
 
   window.addEventListener("scroll", animateProgress);
 
-  const lightOrDark = () => {
-    const themeToggler = document.querySelector(".theme-toggler");
-    themeToggler.classList.toggle("active");
-    if (themeToggler.classList.contains("active")) {
-      document.body.classList.add("active");
-    } else {
-      document.body.classList.remove("active");
-    }
-  };
-
-  document.querySelectorAll(".theme-colors .color").
-   forEach((color) => {
-     color.addEventListener("click", () => {
-       const background = color.style.background;
-      document
-        .querySelector(":root")
-        .style.setProperty("--main-color", background);
-    });
-  })
-
-  const openConfig = () => {
-    const theme = document.querySelector(".themes-container");
-    theme.classList.add("active");
-    document.body.style.paddingRight = "300px";
-  };
-
-  const closeConfig = () => {
-    const theme = document.querySelector(".themes-container");
-    theme.classList.remove("active");
-    document.body.style.paddingRight = "0px";
-  };
-
   return (
-    <div class="App">
-      <div className="themes-container">
-        <AiOutlineCloseCircle id="theme-close" onClick={closeConfig} />
-
-        <h3>Tema</h3>
-        <div onClick={lightOrDark} className="theme-toggler">
-          <span>Escuro</span>
-          <span className="toggler"></span>
-          <span>Claro</span>
-        </div>
-        <h3>Escolha a cor</h3>
-        <div className="theme-colors">
-          <div className="color" style={{ background: "#2980b9" }}></div>
-          <div className="color" style={{ background: "#27ae60" }}></div>
-          <div className="color" style={{ background: "#ffa502" }}></div>
-          <div className="color" style={{ background: "#8e44ad" }}></div>
-          <div className="color" style={{ background: "#0fb9b1" }}></div>
-          <div className="color" style={{ background: "#ffd32a" }}></div>
-          <div className="color" style={{ background: "#ff0033" }}></div>
-          <div className="color" style={{ background: "#e84393" }}></div>
-        </div>
-      </div>
+    <div className="App">     
       <ul className="circles">
         <li><DiBootstrap/></li> 
         <li><DiCss3/></li>
@@ -164,9 +111,6 @@ function App() {
             </li>
             <li>
               <a href="#contato">CONTATO</a>
-            </li>
-            <li>
-              <BsFillGearFill id="theme-open" onClick={openConfig} size={25} />
             </li>
           </ul>
         </nav>
