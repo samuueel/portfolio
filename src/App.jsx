@@ -70,22 +70,22 @@ function App() {
   window.addEventListener("scroll", animateProgress);
 
   return (
-    <div className="App">     
+    <div className="App">
       <ul className="circles">
-        <li><DiBootstrap/></li> 
-        <li><DiCss3/></li>
-        <li><DiJavascript1/></li>
-        <li><DiHtml5/></li>
-        <li><DiReact/></li>
-        <li><DiSass/></li>
-        <li><DiPhotoshop/></li>
-        <li><DiScrum/></li>
-        <li><FiFigma/></li>
-        <li><DiHtml5/></li>
-        <li><DiBootstrap/></li> 
-        <li><DiCss3/></li>
-        <li><DiJavascript1/></li>
-        <li><DiHtml5/></li>
+        <li><DiBootstrap /></li>
+        <li><DiCss3 /></li>
+        <li><DiJavascript1 /></li>
+        <li><DiHtml5 /></li>
+        <li><DiReact /></li>
+        <li><DiSass /></li>
+        <li><DiPhotoshop /></li>
+        <li><DiScrum /></li>
+        <li><FiFigma /></li>
+        <li><DiHtml5 /></li>
+        <li><DiBootstrap /></li>
+        <li><DiCss3 /></li>
+        <li><DiJavascript1 /></li>
+        <li><DiHtml5 /></li>
       </ul>
       <header data-aos="fade-down" id="home">
         <div className="barra"></div>
@@ -220,7 +220,7 @@ function App() {
                 Adicionado sistema de Login 
                 "
         />
-        <Card
+        {/* <Card
           link="https://consultoriadho.com.br"
           img={Projeto2}
           title="Meu Primeiro Freelancer"
@@ -228,15 +228,15 @@ function App() {
               Site feito para um consultório 
               Todo o Design foi feito por mim.
               Desenvolvido em HTML, CSS e JS."
-        />
-        <Card
+        /> */}
+        {/* <Card
           link="https://bancoruja.com.br/"
           img={Projeto4}
           title="CoInveste"
           description="
             Site de uma instituição financeira
             Participação no Front, ideias, arrumar layout e bugs."
-        />
+        /> */}
         <Card
           link="#"
           img={Projeto3}
